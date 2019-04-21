@@ -1,0 +1,10 @@
+div::after {
+  content: "Done in " attr(data-duration) "ms";
+  font-style: italic;
+  color: #808080;
+  font-size: 0.75em;
+  display: block;
+}
+canvas {
+  border: 1px solid #000;
+}
