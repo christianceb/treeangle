@@ -24,18 +24,18 @@ class Basic extends Component {
   }
 
   shouldComponentUpdate(nextProp, nextState) {
-    if ( nextProp == this.props ) {
+    if ( nextProp === this.props ) {
       return false;
     }
     return true;
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    this.state = {
+    this.setState({
       x: this.props.x,
       y: this.props.y,
       steps: this.props.steps
-    }
+    });
     this.draw()
   }
 
@@ -44,7 +44,7 @@ class Basic extends Component {
 
     this.totalColors = 0
     this.lastColor = null
-    this.color = { r: 7, g: 7, b: 7 } // Safely ignore 0 as starting number.
+    this.color = { r: baseColor, g: baseColor, b: baseColor } // Safely ignore 0 as starting number.
     this.pos = { x: 0, y: 0 } // pos = (pos)ition
   }
 
