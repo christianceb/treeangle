@@ -1,0 +1,25 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+main {
+  margin: 0 15px;
+}
+div.canvas::after {
+  content: "Done in " attr(data-duration) "ms at a total of " attr(data-total-colors) " color(s)";
+  font-style: italic;
+  color: #808080;
+  font-size: 0.75em;
+  display: block;
+  margin: 10px 0;
+}
+canvas {
+  box-shadow: 10px 5px 5px #808080;
+  display: block;
+}
+div.control::after {
+  content: attr(data-value) " / " attr(data-max);
+}
